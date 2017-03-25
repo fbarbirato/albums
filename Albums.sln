@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albums.Api", "src\Albums\Al
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albums.Api.Tests", "test\Albums.Api.Tests\Albums.Api.Tests.csproj", "{86086E2E-9CE9-4847-9E8C-C7FD84050C51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albums.Deezer.Client", "Albums.Deezer.Client\Albums.Deezer.Client.csproj", "{1C71FA55-DB88-4331-9B32-CD39E187E9EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albums.Domain", "Albums.Domain\Albums.Domain.csproj", "{08788D1C-E4CC-4C32-B27F-66239E27E83D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{86086E2E-9CE9-4847-9E8C-C7FD84050C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86086E2E-9CE9-4847-9E8C-C7FD84050C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86086E2E-9CE9-4847-9E8C-C7FD84050C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C71FA55-DB88-4331-9B32-CD39E187E9EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C71FA55-DB88-4331-9B32-CD39E187E9EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C71FA55-DB88-4331-9B32-CD39E187E9EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C71FA55-DB88-4331-9B32-CD39E187E9EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08788D1C-E4CC-4C32-B27F-66239E27E83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08788D1C-E4CC-4C32-B27F-66239E27E83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08788D1C-E4CC-4C32-B27F-66239E27E83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08788D1C-E4CC-4C32-B27F-66239E27E83D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8E18FB30-2895-424A-A3D0-86D184E907F6} = {18807045-7A94-4C3A-9990-38D20974F170}
 		{86086E2E-9CE9-4847-9E8C-C7FD84050C51} = {F0E4A601-89CB-4CF8-9106-658000D9BC53}
+		{1C71FA55-DB88-4331-9B32-CD39E187E9EE} = {18807045-7A94-4C3A-9990-38D20974F170}
+		{08788D1C-E4CC-4C32-B27F-66239E27E83D} = {18807045-7A94-4C3A-9990-38D20974F170}
 	EndGlobalSection
 EndGlobal
