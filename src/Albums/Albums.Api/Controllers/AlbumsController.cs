@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Albums.Api.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Albums.Business;
 
 namespace Albums.Api.Controllers
 {
@@ -14,18 +15,27 @@ namespace Albums.Api.Controllers
     [Route("api/Albums")]
     public class AlbumsController : Controller
     {
+        private IAlbumService AlbumService { get; set; }
+
+        public AlbumsController(IAlbumService albumservice)
+        {
+            if (albumservice == null)
+            {
+                throw new ArgumentNullException(nameof(albumservice));
+            }
+
+            AlbumService = albumservice;
+        }
+
         // GET: api/Albums
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            using (var client = new HttpClient())
-            {
-                var uri = new Uri("https://api.deezer.com/user/668264557/albums");
-                var response = await client.GetAsync(uri);
-                response.EnsureSuccessStatusCode();
-                var content = await response.Content.ReadAsStringAsync();
-                return Ok(content);
-            }
+            var felipe = 668264557;
+
+            var albums = await AlbumService.GetAlbumsFor(felipe);
+
+            return Ok(albums);
         }
 
         // GET: api/Albums/5
