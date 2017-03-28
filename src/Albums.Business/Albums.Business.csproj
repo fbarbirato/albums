@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Albums.DTO\Albums.DTO.csproj" />
     <ProjectReference Include="..\Albums.Domain\Albums.Domain.csproj" />
+    <ProjectReference Include="..\Albums.DTO\Albums.DTO.csproj" />
     <ProjectReference Include="..\Albums.MusicProvider\Albums.MusicProvider.csproj" />
   </ItemGroup>
 

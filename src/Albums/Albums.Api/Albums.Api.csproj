@@ -24,9 +24,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Albums.DTO\Albums.DTO.csproj" />
     <ProjectReference Include="..\..\Albums.Business\Albums.Business.csproj" />
     <ProjectReference Include="..\..\Albums.Deezer.Client\Albums.Deezer.Client.csproj" />
+    <ProjectReference Include="..\..\Albums.DTO\Albums.DTO.csproj" />
   </ItemGroup>
 
 </Project>
