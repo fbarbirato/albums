@@ -11,6 +11,21 @@ namespace Albums.Deezer.Client
 {
     public class DeezerMusicGateway : IMusicGateway
     {
+        public async Task<Album> GetAlbumById(int albumId)
+        {
+            using (var client = new HttpClient())
+            {
+                var uri = new Uri($"https://api.deezer.com/album/{albumId}");
+                var response = await client.GetAsync(uri);
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+
+                var album = JsonConvert.DeserializeObject<Album>(content);
+
+                return album;
+            }
+        }
+
         public async Task<IEnumerable<Album>> GetAlbumsFor(int userId)
         {
             using (var client = new HttpClient())

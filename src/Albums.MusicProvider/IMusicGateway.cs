@@ -8,5 +8,6 @@ namespace Albums.MusicProvider
     public interface IMusicGateway
     {
         Task<IEnumerable<Album>> GetAlbumsFor(int userId);
+        Task<Album> GetAlbumById(int albumId);
     }
 }

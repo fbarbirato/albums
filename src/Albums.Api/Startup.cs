@@ -32,6 +32,7 @@ namespace Albums.Api
         {
             services.AddTransient<IAlbumService, AlbumService>();
             services.AddTransient<IMusicGateway, DeezerMusicGateway>();
+            services.AddTransient<IFavoriteAlbumRepository, FavoriteAlbumRepository>();
 
             // Add framework services.
             services.AddMvc();

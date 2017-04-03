@@ -39,16 +39,19 @@ namespace Albums.Api.Controllers
         }
 
         // GET: api/Albums/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{albumId}")]
+        public async Task<IActionResult> GetAsync(int albumId)
         {
-            return "value";
+            var album = await AlbumService.GetIndividualAlbum(albumId);
+
+            return Ok(album);
         }
-        
+
         // POST: api/Albums
-        [HttpPost]
-        public void Post([FromBody]string value)
+        [HttpPost("{albumId}")]
+        public void AddToFavorite(int albumId)
         {
+            AlbumService.AddToFavorite(albumId);
         }
         
         // PUT: api/Albums/5

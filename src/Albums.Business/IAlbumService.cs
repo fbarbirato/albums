@@ -9,5 +9,7 @@ namespace Albums.Business
     public interface IAlbumService
     {
         Task<IEnumerable<Album>> GetAlbumsFor(int userId);
+        void AddToFavorite(int albumId);
+        Task<Album> GetIndividualAlbum(int albumId);
     }
 }
